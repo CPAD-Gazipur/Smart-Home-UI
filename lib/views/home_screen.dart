@@ -52,14 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     'Welcome Home,',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       color: Colors.grey[700],
                     ),
                   ),
                   Text(
                     'MD. AL-AMIN',
                     style: GoogleFonts.bebasNeue(
-                      fontSize: 62,
+                      fontSize: 52,
                     ),
                   ),
                 ],
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Text(
                 'Smart Devices',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey[800],
                 ),
@@ -93,7 +93,10 @@ class _HomeScreenState extends State<HomeScreen> {
               child: GridView.builder(
                 itemCount: AppData.smartDevices.length,
                 physics: const NeverScrollableScrollPhysics(),
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.only(
+                  left: 15,
+                  right: 15,
+                ),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio: 1 / 1.2,

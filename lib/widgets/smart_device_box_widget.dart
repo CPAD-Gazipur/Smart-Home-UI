@@ -22,10 +22,20 @@ class SmartDeviceBoxWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15.0),
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
         decoration: BoxDecoration(
           color: isPowerOn ? Colors.grey[900] : Colors.grey[200],
           borderRadius: BorderRadius.circular(24),
+          /*boxShadow: [
+            BoxShadow(
+              color: isPowerOn ? Colors.white : Colors.grey.withOpacity(0.2),
+              blurRadius: 2,
+              spreadRadius: 2,
+              offset: const Offset(0, 0),
+            )
+          ],*/
         ),
         padding: const EdgeInsets.symmetric(
           vertical: AppConstant.verticalPadding,
