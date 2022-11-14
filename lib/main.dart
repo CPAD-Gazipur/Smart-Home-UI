@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home_ui/view/home_screen.dart';
+
+import 'views/views.dart';
 
 void main() {
   runApp(const MyApp());
