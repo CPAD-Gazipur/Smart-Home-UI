@@ -43,10 +43,17 @@ class SmartDeviceBoxWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(
-              iconPath,
-              height: 55,
-              color: isPowerOn ? Colors.white : Colors.black,
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15.0),
+                  child: Image.asset(
+                    iconPath,
+                    height: 55,
+                    color: isPowerOn ? Colors.white : Colors.black,
+                  ),
+                ),
+              ],
             ),
             Row(
               children: [
@@ -66,8 +73,11 @@ class SmartDeviceBoxWidget extends StatelessWidget {
                   ),
                 ),
                 Transform.rotate(
-                  angle: pi / 2,
+                  angle: -pi / 2,
                   child: CupertinoSwitch(
+                    thumbColor: isPowerOn ? Colors.white : Colors.black,
+                    trackColor: isPowerOn ? Colors.grey[400] : Colors.white,
+                    activeColor: isPowerOn ? Colors.grey[400] : null,
                     value: isPowerOn,
                     onChanged: onChanged,
                   ),
